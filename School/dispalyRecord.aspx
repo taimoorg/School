@@ -33,7 +33,7 @@
             background-color: #008CBA; 
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 5px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
