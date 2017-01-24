@@ -10,7 +10,9 @@
 
     <title></title>
     <script type="text/javascript">
-
+        //$(document).on("click", "[id*=lnkView]", function () {
+        //    $("#id").html($(".ST_ID", $(this).closest("tr")).html());
+        //    $("#name").html($(".Name", $(this).closest("tr")).html());
         var editdialog
         $(document).ready(function () {
             SetDialog();
@@ -30,7 +32,9 @@
             });
         }
 
-            function SaveData() {
+        //return false;
+        //});
+        function SaveData() {
             $.ajax({
                 type: "POST",
                 url: "apis.aspx/P_Student_IU",
