@@ -64,7 +64,10 @@
                 data: '{ST_ID: ' + ST_ID + '}',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-              
+                //$(document).on("click", "[id*=lnkView]", function () {
+                //    $("#id").html($(".ST_ID", $(this).closest("tr")).html());
+                //    $("#name").html($(".Name", $(this).closest("tr")).html());
+            });
         }
 
         function AddNewSt() {
