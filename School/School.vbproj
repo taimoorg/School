@@ -93,6 +93,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="apis.aspx" />
     <Content Include="dispalyRecord.aspx" />
     <Content Include="Global.asax" />
     <Content Include="insertData.aspx" />
@@ -101,6 +102,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="apis.aspx.designer.vb">
+      <DependentUpon>apis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="apis.aspx.vb">
+      <DependentUpon>apis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Classes\DB\DataProvider.vb" />
     <Compile Include="dispalyRecord.aspx.designer.vb">
       <DependentUpon>dispalyRecord.aspx</DependentUpon>
