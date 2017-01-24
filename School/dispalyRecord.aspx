@@ -57,23 +57,23 @@
             });
         }
 
-        function Del_Record(ST_ID) {
-            $.ajax({
-                type: "POST",
-                url: "apis.aspx/P_Student_Delete",
-                data: '{ST_ID: ' + ST_ID + '}',
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
+        //function Del_Record(ST_ID) {
+        //    $.ajax({
+        //        type: "POST",
+        //        url: "apis.aspx/P_Student_Delete",
+        //        data: '{ST_ID: ' + ST_ID + '}',
+        //        contentType: "application/json; charset=utf-8",
+        //        dataType: "json",
  
-            });
-        }
+        //    });
+        //}
 
-        function AddNewSt() {
-            $("#id").html(0);
-            $("#txtName").val("");
+        //function AddNewSt() {
+        //    $("#id").html(0);
+        //    $("#txtName").val("");
 
-            editdialog.dialog("open");
-        }
+        //    editdialog.dialog("open");
+        //}
 
         function OpenDialog(ST_ID) {
             $.ajax({
