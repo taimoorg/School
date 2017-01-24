@@ -64,21 +64,7 @@
                 data: '{ST_ID: ' + ST_ID + '}',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                success: function (response) {
-                    $('#overlay').hide();
-                    editdialog.dialog("close");
-                },
-                failure: function (response) {
-                    $('#overlay').hide();
-                    alert(response.d);
-                },
-                error: function (response) {
-                    $('#overlay').hide();
-                    alert(response.d);
-                }
-
-            });
-
+              
         }
 
         function AddNewSt() {
