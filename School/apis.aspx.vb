@@ -19,7 +19,7 @@ Public Class apis
     End Function
 
     <WebMethod()> _
-    Public Shared Function P_Student_Delete(ST_ID As Integer) As Integer
+Public Shared Function P_Student_Delete(ST_ID As Integer) As Integer
         
         DataProvider.P_Student_Delete(ST_ID)
 
