@@ -126,9 +126,9 @@
         </div>
         <br />
         <div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false"
-                CellPadding="5"
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CellPadding="5"
                 HeaderStyle-BackColor="LightBlue" HeaderStyle-Font="Bold" BorderStyle="Groove" DataKeyNames="ST_ID">
+                
                 <Columns>
                     <asp:BoundField DataField="ST_ID" ItemStyle-CssClass="ST_ID" HeaderText="Id" ItemStyle-Width="30" />
                     <asp:BoundField DataField="Name" ItemStyle-CssClass="Name" HeaderText="Name" ItemStyle-Width="930" />
@@ -143,7 +143,9 @@
                             <asp:LinkButton Text="Delete" ID="lnkDel" runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
+
                 </Columns>
+
             </asp:GridView>
 
             <div id="dialog" style="display: none">

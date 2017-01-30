@@ -97,6 +97,7 @@
     <Content Include="dispalyRecord.aspx" />
     <Content Include="Global.asax" />
     <Content Include="insertData.aspx" />
+    <Content Include="showRecordTable.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -146,6 +147,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="showRecordTable.aspx.designer.vb">
+      <DependentUpon>showRecordTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showRecordTable.aspx.vb">
+      <DependentUpon>showRecordTable.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
