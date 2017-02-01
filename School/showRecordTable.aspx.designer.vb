@@ -30,13 +30,4 @@ Partial Public Class showRecordTable
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblResult As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Table1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Table1 As Global.System.Web.UI.HtmlControls.HtmlTable
 End Class
