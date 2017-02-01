@@ -26,7 +26,7 @@ Public Class insertData
 
         'obj.Name = txtName.Text
         'DataProvider.P_Student_IU(obj)
-        Server.Transfer("dispalyRecord.aspx", True)
+        Server.Transfer("showRecordTable.aspx", True)
     End Sub
 
 End Class
