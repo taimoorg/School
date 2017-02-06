@@ -10,7 +10,6 @@ Public Class StudentInfo
         ST_ID = StdID
         Name = stdName
         Father_Name = fatherName
-
     End Sub
 
 End Class
