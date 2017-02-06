@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+Imports System.Data.SqlClient
 Imports System.Data
 Imports System.Configuration
 Public Class insertData
@@ -11,9 +11,13 @@ Public Class insertData
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim id As Integer
         Dim name As String
+        Dim fatherName As String
+
         id = 0
         name = txtName.Text
-        DataProvider.P_Student_IU(New School.StudentInfo(id, name))
+        fatherName = txtFname.Text
+
+        DataProvider.P_Student_IU(New School.StudentInfo(id, name, fatherName))
 
         'Second METHOD
 
