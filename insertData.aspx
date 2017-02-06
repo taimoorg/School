@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="insertData.aspx.vb" Inherits="School.insertData" %>
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="insertData.aspx.vb" Inherits="School.insertData" %>
 
 <!DOCTYPE html>
 
@@ -16,15 +16,22 @@
                     <td style="width: 100px">Name:</td>
                     <td style="width: 100px">
                     <asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
-                </tr>
 
-                <tr>
-                    <td colspan="2">
-                        <br />
-                        <asp:Button ID="Button1" runat="server" Text="Submit" />
-                    </td>
-                </tr>
+                 <tr>
+                
+                  <tr>
+                     <td style="width: 100px">Father Name:</td>
+                     <td style="width: 100px">
+                     <asp:TextBox ID="txtFname" runat="server"></asp:TextBox></td>
+                      
+                  <tr>
 
+
+                   <td colspan="2">
+                   <br />
+                   <asp:Button ID="Button1" runat="server" Text="Submit" />
+                   </td>
+                   </tr>
             </table>
         </div>
     </form>
