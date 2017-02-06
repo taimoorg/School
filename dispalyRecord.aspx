@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="dispalyRecord.aspx.vb" Inherits="School.dispalyRecord" %>
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="dispalyRecord.aspx.vb" Inherits="School.dispalyRecord" %>
 
 <!DOCTYPE html>
 
