@@ -13,7 +13,7 @@ Public Class DataProvider
     Public Shared Function P_Student_IU(Obj As StudentInfo) As Integer
         Dim objDatabase As Database
         objDatabase = DatabaseFactory.CreateDatabase()
-        Return CType(objDatabase.ExecuteDataSet("P_Student_IU", Obj.ST_ID, Obj.Name, Obj.Father_Name), DataSet).Tables(0).Rows(0).Item(0)
+         Return CType(objDatabase.ExecuteDataSet("P_Student_IU", Obj.ST_ID, Obj.Name, Obj.Father_Name, Obj.Gender), DataSet).Tables(0).Rows(0).Item(0)
     End Function
     Public Shared Function P_Student_GetByST_ID(ST_ID As Integer) As DataRow
         Dim objDatabase As Database
