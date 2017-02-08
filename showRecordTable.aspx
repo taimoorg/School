@@ -42,11 +42,18 @@
 
 
         function SaveData() {
+                var gender;
+            if ($("#radio_1").prop("checked")) {
+                gender = "M";
+            }
+            else {
+                gender = "F";
+            }
             $.ajax({
                 type: "POST",
                 url: "apis.aspx/P_Student_IU",
                 //data: '{ST_ID: ' + $("#id").html() + ',Name:"' + $("#txtName").val() +'"}',
-                data: '{ST_ID: ' + $("#id").html() + ',Name:"' + $("#txtName").val() + '",Father_Name:"'+$("#txtFname").val()+'"}',
+              data: '{ST_ID: ' + $("#id").html() + ',Name:"' + $("#txtName").val() + '",Father_Name:"' + $("#txtFname").val() + '",Gender:"' + gender + '"}',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 beforeSend: function () { $('#overlay').show(); },
@@ -171,23 +178,38 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="padding: 10px">
+
+            <label>Name:</label>  &nbsp;
+           
             <select id="ddlName">
                 <%-- <option value="" disabled="disabled" selected="selected">Select a Option</option>--%>
                 <option value="1">Starting with </option>
                 <option value="2">containing </option>
                 <option value="3">Ending with </option>
             </select>
-        </div>
-        <br />
 
-        <div>
-            <input id="textbox" type="text" />
+            <input id="textbox" type="text" /> &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label>Father Name:</label> &nbsp;
+            
+            <select id="ddlFatherName">
+                  <option value="1">Starting with </option>
+                  <option value="2">containing </option>
+                  <option value="3">Ending with </option>
+            </select>
+
+            <input id="textbox1" type="text" /> &nbsp;&nbsp;&nbsp;&nbsp;
+
+                <input type='radio' name='type' value='1' />
+                <label for="radio_1">Male</label>
+                <input type='radio' name='type' value='2' />
+                <label for="radio_2">Female</label> &nbsp;&nbsp;&nbsp;&nbsp;
+
+
             <input id="Button1" type="button" value="Filter" onclick="NameSearch()" />
         </div>
         <br />
-
-
 
         <div class="ui-dialog-buttonset">
             <button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="AddNewSt();return false;">
@@ -200,11 +222,20 @@
         <div id="dialog" style="display: none">
             <b>Id:</b> <span id="id"></span>
             <br />
-            <b>Name:</b>
+            <b>Name:</b><br />
             <input id="txtName" type="text" />
             <br />
-            <b>Father Name:</b>
+            <b>Father Name:</b><br />
             <input id="txtFname" type="text" />
+            <br />
+
+            <b>Gender:</b><br />
+            <div id="radio">
+                <input type='radio' id='radio_1' name='type' value='1' />
+                <label for="radio_1">Male</label>
+                <input type='radio' id='radio_2' name='type' value='2' />
+                <label for="radio_2">Female</label>
+            </div>
         </div>
 
     </form>
