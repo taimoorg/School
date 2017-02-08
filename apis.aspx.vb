@@ -24,11 +24,9 @@ Public Class apis
 
     End Function
 
-
-
-    <WebMethod()> _
-    Public Shared Function P_Student_IU(ST_ID As Integer, Name As String, Father_Name As String) As Integer
-        Return DataProvider.P_Student_IU(New StudentInfo(ST_ID, Name, Father_Name))
+   <WebMethod()> _
+    Public Shared Function P_Student_IU(ST_ID As Integer, Name As String, Father_Name As String, Gender As String) As Integer
+        Return DataProvider.P_Student_IU(New StudentInfo(ST_ID, Name, Father_Name, Gender))
     End Function
 
     <WebMethod()> _
