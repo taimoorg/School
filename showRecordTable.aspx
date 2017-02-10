@@ -151,12 +151,48 @@
                 }
             });
         }
+        
+               // function NameSearch() {
+       //     $.ajax({
+       //        type: "POST",
+       //         url: "apis.aspx/P_Student_GetByName",
+       //         data: '{Name: "' + $("#textbox").val() + '",sOptions:"' + $("#ddlName").val() + '"}',
+       //         contentType: "application/json; charset=utf-8",
+       //        dataType: "json",
+       //       beforeSend: function () { $('#overlay').show(); },
+       //       success: function (response) {
+       //           $("#divtbl").html(response.d);
+       //       },
+       //       failure: function (response) {
+       //           $('#overlay').hide();
+       //           alert(response.d);
+       //       },
+       //       error: function (response) {
+       //           $('#overlay').hide();
+        //          alert(response.d);
+        //      }
+        //  });
+      //  }
 
-        function NameSearch() {
+        // NEW CODE FOR FILTER
+        
+             function NameSearch() {
+            var gender;
+            if ($("#radio_3").prop("checked")) {
+                gender = "M";
+            }
+            else if ($("#radio_4").prop("checked")) {
+                gender = "F";
+            }
+            else {
+                gender = "";
+            }
+
             $.ajax({
                 type: "POST",
                 url: "apis.aspx/P_Student_GetByName",
-                data: '{Name: "' + $("#textbox").val() + '",sOptions:"' + $("#ddlName").val() + '"}',
+                data: '{Name: "' + $("#textbox").val() + '",sOptions:"' + $("#ddlName").val() + '",Father_Name: "' + $("#textbox1").val() + '",fatherOpt:"' + $("#ddlFatherName").val() + '",Gender:"' + gender + '"}',
+                //data: '{Name: "' + $("#textbox").val() + '",sOptions:"' + $("#ddlName").val() + '",Father_Name: "' + $("#textbox1").val() + '",fatherOpt:"' + $("#ddlFatherName").val() + '"}',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 beforeSend: function () { $('#overlay').show(); },
@@ -172,7 +208,10 @@
                     alert(response.d);
                 }
             });
-        }
+            }
+        
+
+
 
     </script>
 </head>
