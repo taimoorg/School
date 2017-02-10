@@ -14,14 +14,18 @@ Public Class apis
         Return Ret
     End Function
 
-    <WebMethod()> _
-    Public Shared Function P_Student_GetByName(Name As String, sOptions As Integer) As String
+'    <WebMethod()> _
+'   Public Shared Function P_Student_GetByName(Name As String, sOptions As Integer) As String
+'        Dim dt As DataTable
+'        dt = DataProvider.P_Student_GetByName(Name, sOptions)
+'       Return GetHtmlTable(dt)
+'    End Function
+
+  <WebMethod()> _
+    Public Shared Function P_Student_GetByName(Name As String, sOptions As Integer, Father_Name As String, fatherOpt As Integer, Gender As String) As String
         Dim dt As DataTable
-        dt = DataProvider.P_Student_GetByName(Name, sOptions)
-
-        Return GetHtmlTable(dt)
-
-
+        dt = DataProvider.P_Student_GetByName(Name, sOptions, Father_Name, fatherOpt, Gender)
+       Return GetHtmlTable(dt)
     End Function
 
    <WebMethod()> _
