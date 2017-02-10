@@ -25,7 +25,23 @@ Public Class DataProvider
         objDatabase = DatabaseFactory.CreateDatabase()
         objDatabase.ExecuteNonQuery("P_Student_Delete", ST_ID)
     End Sub
-   Public Shared Function P_Student_GetByName(Name As String, sOptions As Integer) As DataTable
+
+'    Public Shared Function P_Student_GetByName(Name As String, sOptions As Integer) As DataTable
+'        Dim objDatabase As Database
+'        objDatabase = DatabaseFactory.CreateDatabase()
+'        Select Case sOptions
+'            Case 1
+'                Name = String.Format("{0}%", Name)
+'            Case 2
+'                Name = String.Format("%{0}%", Name)
+'            Case 3
+'                Name = String.Format("%{0}", Name)
+'        End Select
+'        Return CType(objDatabase.ExecuteDataSet("P_Student_GetByName", Name), DataSet).Tables(0)
+'    End Function
+    
+      Public Shared Function P_Student_GetByName(Name As String, sOptions As Integer, Father_Name As String, fatherOpt As Integer, Gender As String) As DataTable
+
         Dim objDatabase As Database
         objDatabase = DatabaseFactory.CreateDatabase()
         Select Case sOptions
@@ -36,7 +52,17 @@ Public Class DataProvider
             Case 3
                 Name = String.Format("%{0}", Name)
         End Select
-        Return CType(objDatabase.ExecuteDataSet("P_Student_GetByName", Name), DataSet).Tables(0)
 
+        Select Case fatherOpt
+            Case 1
+                Father_Name = String.Format("{0}%", Father_Name)
+            Case 2
+                Father_Name = String.Format("%{0}%", Father_Name)
+            Case 3
+                Father_Name = String.Format("%{0}", Father_Name)
+        End Select
+
+      Return CType(objDatabase.ExecuteDataSet("P_Student_GetByName", Name, Father_Name, Gender), DataSet).Tables(0)
     End Function
+    
 End Class
